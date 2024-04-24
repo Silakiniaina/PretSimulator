@@ -1,6 +1,11 @@
 
 <div class="login-container">
     <h2>Login</h2>
+    <p style="color:green"><?php 
+        if(isset($success)){
+            echo $success;
+        }
+    ?></p>
     <form action="<?php echo base_url('authentificationController/authentification'); ?>" method="POST" class="login-form">
         <div class="form-group">
             <label for="email">Email:</label>

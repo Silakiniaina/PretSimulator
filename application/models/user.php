@@ -13,7 +13,7 @@
         }
 
         public function inscription($nom, $email, $password){
-            $query = $this->db->query("INSERT INTO user(nom,email,password) VALUES ('".$nom."','".$email."',SHA1('".$password."'))");
+            $this->db->query("INSERT INTO user(nom,email,password) VALUES ('".$nom."','".$email."',SHA1('".$password."'))");
         }
     }
 

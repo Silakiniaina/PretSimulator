@@ -14,7 +14,10 @@
             $password = $this->input->post('password');
             $this->load->model('user');
             $this->user->inscription($nom,$email,$password);
-            $controller =  $this->load->controller('authentificationController','login');
-            $this->login->authentification();
+            $data = [];
+            $data["title"] = "login";
+            $data["content"] = "login";
+            $data["success"] = "Inscription fait";
+            $this->load->view('template',$data);
         }	
     }
