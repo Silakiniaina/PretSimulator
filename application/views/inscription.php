@@ -9,10 +9,10 @@
 <body>
     <div class="signup-container">
         <h2>Sign Up</h2>
-        <form action="user/login" method="POST" class="signup-form">
+        <form action="<?php echo base_url('inscriptionController/inscription'); ?>" method="POST" class="signup-form">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="nom" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -26,6 +26,7 @@
             <?php if(isset($error)){ ?>
                 <p class="error"><?php echo $error ; ?></p>
             <?php } ?>
+            <p>Already have an account ? <a href="<?php echo base_url('authentificationController'); ?>">Sign in</a></p>
         </form>
     </div>
 </body>

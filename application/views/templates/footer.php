@@ -1,11 +1,12 @@
 
+  </div>
 </div>
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Sakila test 2024</p>
+      <p class="m-0 text-center text-white">Copyright &copy; pret simulator exam SI 2024</p>
     </div>
     <!-- /.container -->
   </footer>
