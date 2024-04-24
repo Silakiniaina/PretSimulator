@@ -19,7 +19,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit">Login</button>
-            <?php if(isset($error){ ?>
+            <?php if(isset($error)){ ?>
                 <p class="error"><?php echo $error ; ?></p>
             <?php } ?>
         </form>
