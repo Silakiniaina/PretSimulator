@@ -1,0 +1,55 @@
+###################-PRET SIMULATOR-########################
+page : connexion
+    Views : 
+        -Creation formulaire de login
+        -Affichage erreur si existe
+        -Action formulaire -> user/login
+    Controller:
+        - Creation controller user
+        - Creation fonction authentification($email, $password)
+    Model : 
+        - Creation model user 
+        - Creation fonction login($email, $password)
+    base : 
+        - Creation table user ( id, nom, email, password)
+page: inscription
+    Views : 
+        -Creation formulaire de login
+        -Affichage erreur si existe
+        -Action formulaire -> user/login
+    Controller
+        - Creation fonction inscription($nom,$email, $password) dans le controller user
+    Model :
+        - Creation fonction inscription($nom,$email, $password) dans le model user
+page : home
+    Views : 
+        - Creation template header
+        - Creation template footer
+        - Creation formulaire d'insertion simulation
+        - Creation tableau d'amortissement
+        - Affichage erreur si existe
+        - Action formulaire -> simulation/add
+    Controller:
+        - Creation controller simulation 
+        - Creation fonction add($montant, $taux, $duree, $date_debut)
+        - Creation controller amortissement
+        -  -> return ModelAndView('tableau_amortissement')
+        - Creation fonction info($id) -> return ModelAndView('tableau_amortissement)
+    Model :
+        - Creation model simulation 
+        - Creation fonction add_simulation($id,$montant, $taux, $duree, $date_debut)
+        - Creation model model amortissement
+        - Creation fonction simulate($montant, $taux, $duree, $date_debut) -> return array()
+    Base : 
+        - Creation table simulation (id,id_user,montant,taux,duree,$date_debut,$datetime_simulation)
+        - Creation table amortissement(id,id_simulation,mensualite,date_versement,solde_initial,solde_menusel,capital_rembourse, interet,capital_restant)
+page : list_simulation
+    Views : 
+        - Creation liste contenant les information de la simulation
+        - creation lien -> amortissement?id=<idsimulation>
+    Controller:
+        - Creation fonction list dans le controller simulation
+    Model :
+        - Creation fonction get_all dans la model simulation
+    Base : 
+        - Creation vue v_info_simulation
