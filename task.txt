@@ -1,7 +1,7 @@
 ###################-PRET SIMULATOR-########################
 page : connexion
     Views : 
-        -Creation formulaire de login
+        -(OK)Creation formulaire de login 
         -Affichage erreur si existe
         -Action formulaire -> user/login
     Controller:
@@ -14,7 +14,7 @@ page : connexion
         - Creation table user ( id, nom, email, password)
 page: inscription
     Views : 
-        -Creation formulaire de login
+        -(Ok)Creation formulaire de login
         -Affichage erreur si existe
         -Action formulaire -> user/login
     Controller

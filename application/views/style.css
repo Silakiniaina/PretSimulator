@@ -57,4 +57,39 @@ button:hover {
 .error {
     color: red;
 }
+.signup-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+    margin-top: 20px;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.login-container a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
 

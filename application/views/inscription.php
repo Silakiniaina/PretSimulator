@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form action="user/login" method="POST" class="login-form">
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="user/login" method="POST" class="signup-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -18,12 +22,11 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
-            <?php if(isset($error){ ?>
+            <button type="submit">Sign Up</button>
+            <?php if(isset($error)){ ?>
                 <p class="error"><?php echo $error ; ?></p>
             <?php } ?>
         </form>
-        <p>Don't have an account? <a href="inscription.php">Sign up</a></p>
     </div>
 </body>
 </html>
